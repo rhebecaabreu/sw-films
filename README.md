@@ -1,5 +1,5 @@
 # SW Films
-Projeto *SW Films* consumindo a *SWAPI (Star Wars API)*
+Projeto *SW Films*, uma aplicação para dispositivos móveis com Android, consumindo a *SWAPI (Star Wars API)*.
 
 **Tecnologias utilizadas**
 
