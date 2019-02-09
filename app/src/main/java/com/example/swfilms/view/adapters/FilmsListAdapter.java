@@ -41,7 +41,30 @@ public class FilmsListAdapter extends RecyclerView.Adapter<FilmsListHolder> {
         filmsListHolder.yearTextView.setText(film.getReleaseDate());
         filmsListHolder.directorTextView.setText(film.getDirector());
         filmsListHolder.openingTextView.setText(film.getOpeningCrawl());
-//        filmsListHolder.posterImageView.setImageDrawable(mContext.getResources().getDrawable(film.getPoster(), null));
+
+        switch (film.getEpisodeId()){
+            case 1:
+                filmsListHolder.posterImageView.setImageResource(R.drawable.ep1);
+                break;
+            case 2:
+                filmsListHolder.posterImageView.setImageResource(R.drawable.ep2);
+                break;
+            case 3:
+                filmsListHolder.posterImageView.setImageResource(R.drawable.ep3);
+                break;
+            case 4:
+                filmsListHolder.posterImageView.setImageResource(R.drawable.ep);
+                break;
+            case 5:
+                filmsListHolder.posterImageView.setImageResource(R.drawable.ep5);
+                break;
+            case 6:
+                filmsListHolder.posterImageView.setImageResource(R.drawable.ep6);
+                break;
+            case 7:
+                filmsListHolder.posterImageView.setImageResource(R.drawable.ep7);
+                break;
+        }
 
         filmsListHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override

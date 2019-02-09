@@ -25,7 +25,6 @@ import java.util.List;
 public class FilmsListActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
-    FilmsListAdapter adapter;
     FilmsListViewModel filmsListViewModel = new FilmsListViewModel();;
 
     @Override
