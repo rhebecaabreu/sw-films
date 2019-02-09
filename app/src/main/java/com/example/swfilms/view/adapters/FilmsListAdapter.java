@@ -32,7 +32,7 @@ public class FilmsListAdapter extends RecyclerView.Adapter<FilmsListHolder> {
     public void onBindViewHolder(FilmsListHolder filmsListHolder, int position) {
         Films films = filmsList.get(position);
         filmsListHolder.titleTextView.setText(films.getTitle());
-        filmsListHolder.episodeTextView.setText(String.valueOf(films.getEpisodeID()));
+        filmsListHolder.episodeTextView.setText(String.valueOf(films.getEpisodeId()));
 //        filmsListHolder.posterImageView.setImageDrawable(mContext.getResources().getDrawable(films.getPoster(), null));
 
         //TODO adicionar demais atributos
