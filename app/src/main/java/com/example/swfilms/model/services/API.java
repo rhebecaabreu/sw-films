@@ -1,22 +1,11 @@
 package com.example.swfilms.model.services;
 
-import android.util.Log;
-
-import com.example.swfilms.model.entities.Films;
-import com.example.swfilms.model.entities.Planets;
-import com.example.swfilms.viewmodel.FilmsListViewModel;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 

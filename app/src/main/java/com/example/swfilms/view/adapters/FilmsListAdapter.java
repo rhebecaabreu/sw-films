@@ -7,18 +7,18 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.swfilms.R;
-import com.example.swfilms.model.entities.Films;
+import com.example.swfilms.model.entities.Film;
 
 import java.util.List;
 
 public class FilmsListAdapter extends RecyclerView.Adapter<FilmsListHolder> {
 
     private Context mContext;
-    private List<Films> filmsList;
+    private List<Film> filmList;
 
-    public FilmsListAdapter(Context mContext, List<Films> filmsList) {
+    public FilmsListAdapter(Context mContext, List<Film> filmList) {
         this.mContext = mContext;
-        this.filmsList = filmsList;
+        this.filmList = filmList;
     }
 
     @Override
@@ -30,16 +30,16 @@ public class FilmsListAdapter extends RecyclerView.Adapter<FilmsListHolder> {
 
     @Override
     public void onBindViewHolder(FilmsListHolder filmsListHolder, int position) {
-        Films films = filmsList.get(position);
-        filmsListHolder.titleTextView.setText(films.getTitle());
-        filmsListHolder.episodeTextView.setText(String.valueOf(films.getEpisodeId()));
-//        filmsListHolder.posterImageView.setImageDrawable(mContext.getResources().getDrawable(films.getPoster(), null));
+        Film film = filmList.get(position);
+        filmsListHolder.titleTextView.setText(film.getTitle());
+        filmsListHolder.episodeTextView.setText(String.valueOf(film.getEpisodeId()));
+//        filmsListHolder.posterImageView.setImageDrawable(mContext.getResources().getDrawable(film.getPoster(), null));
 
         //TODO adicionar demais atributos
     }
 
     @Override
     public int getItemCount() {
-        return filmsList.size();
+        return filmList.size();
     }
 }

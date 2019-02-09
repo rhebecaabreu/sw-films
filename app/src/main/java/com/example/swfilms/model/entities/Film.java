@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Films implements Serializable {
+public class Film implements Serializable {
 
     @SerializedName("title")
     @Expose
@@ -53,7 +53,7 @@ public class Films implements Serializable {
     private String url;
 
 
-    public Films(String title, Integer episodeId) {
+    public Film(String title, Integer episodeId) {
         this.title = title;
         this.episodeId = episodeId;
     }

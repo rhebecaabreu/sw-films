@@ -4,9 +4,6 @@ import java.util.List;
 
 public class FilmsList {
 
-    private List<Films> films;
+    public List<Film> results;
 
-    public List<Films> getFilms() {
-        return films;
-    }
 }
