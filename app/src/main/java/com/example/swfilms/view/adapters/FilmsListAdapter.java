@@ -1,13 +1,18 @@
 package com.example.swfilms.view.adapters;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.swfilms.R;
 import com.example.swfilms.model.entities.Film;
+import com.example.swfilms.view.activities.FilmsDetailsActivity;
+import com.example.swfilms.view.activities.FilmsListActivity;
 
 import java.util.List;
 
@@ -30,16 +35,30 @@ public class FilmsListAdapter extends RecyclerView.Adapter<FilmsListHolder> {
 
     @Override
     public void onBindViewHolder(FilmsListHolder filmsListHolder, int position) {
-        Film film = filmList.get(position);
+        final Film film = filmList.get(position);
         filmsListHolder.titleTextView.setText(film.getTitle());
         filmsListHolder.episodeTextView.setText(String.valueOf(film.getEpisodeId()));
+        filmsListHolder.yearTextView.setText(film.getReleaseDate());
+        filmsListHolder.directorTextView.setText(film.getDirector());
+        filmsListHolder.openingTextView.setText(film.getOpeningCrawl());
 //        filmsListHolder.posterImageView.setImageDrawable(mContext.getResources().getDrawable(film.getPoster(), null));
 
-        //TODO adicionar demais atributos
+        filmsListHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(mContext, film.getTitle(), Toast.LENGTH_LONG).show();
+
+                Intent intent = new Intent(mContext, FilmsDetailsActivity.class);
+                intent.putExtra("film", film);
+                mContext.startActivity(intent);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         return filmList.size();
     }
+
+
 }
