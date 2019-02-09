@@ -2,7 +2,6 @@ package com.example.swfilms.viewmodel;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.database.Observable;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
@@ -19,7 +18,6 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.Response;
 
 public class FilmsListViewModel {
     List<Film> filmList;
