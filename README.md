@@ -1,2 +1,10 @@
-# sw-film
-Repositório para aplicação Android que exibe filmes do Star Wars com suas respectivas informações, consumindo a API do Star Wars. 
+# SW Films
+Projeto *SW Films* consumindo a *SWAPI (Star Wars API)*
+
+**Tecnologias utilizadas**
+
+ - [x] Java
+ - [x] [Retrofit](https://square.github.io/retrofit/)
+ - [x] [Gson](https://github.com/google/gson)
+ - [x] [OkHTTP](https://square.github.io/okhttp/)
+ - [x] [SWAPI](swapi.co)
