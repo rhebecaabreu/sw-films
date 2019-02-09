@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SW Films</string>
+
+    <string name="title">Title</string>
+    <string name="release_date">Release Date</string>
+    <string name="director">Director</string>
+    <string name="opening_crawl">Opening Crawl</string>
+    <string name="characters">Characters</string>
+    <string name="planets">Planets</string>
+    <string name="species">Species</string>
+    <string name="starships">Starships</string>
+
+</resources>
