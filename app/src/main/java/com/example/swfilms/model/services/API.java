@@ -1,11 +1,15 @@
 package com.example.swfilms.model.services;
 
+import com.example.swfilms.model.entities.FilmsList;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import java.io.IOException;
+
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -32,4 +36,14 @@ public class API {
 
         return retrofit;
     }
+
+    public static Call<FilmsList> getFilms() throws IOException {
+
+        SwAPI starWarsAPI = getClient().create(SwAPI.class);
+        Call<FilmsList> requestCheckUser = starWarsAPI.filmsList();
+
+        return requestCheckUser;
+    }
+
+
 }
