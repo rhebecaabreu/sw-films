@@ -21,8 +21,7 @@ import retrofit2.Callback;
 
 public class FilmsListViewModel {
     List<Film> filmList;
-    SwAPI service;
-    
+
     public void getFilms(final Context context, final ProgressDialog progress, final RecyclerView recyclerView) throws IOException {
 
         filmList = new ArrayList<>();
@@ -39,8 +38,6 @@ public class FilmsListViewModel {
                         filmList.add(f);
                     }
 
-                    Log.i("TEST: ", String.valueOf(filmList.size()));
-
                     FilmsListAdapter adapter = new FilmsListAdapter(context, filmList);
                     recyclerView.setAdapter(adapter);
                     progress.dismiss();
@@ -55,7 +52,6 @@ public class FilmsListViewModel {
                 Log.i("Response: ", " ERROR "+t.getMessage());
             }
         });
-
     }
 }
 

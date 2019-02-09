@@ -67,8 +67,6 @@ public class FilmsListAdapter extends RecyclerView.Adapter<FilmsListHolder> {
         filmsListHolder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, film.getTitle(), Toast.LENGTH_LONG).show();
-
                 Intent intent = new Intent(mContext, FilmsDetailsActivity.class);
                 intent.putExtra("film", film);
                 mContext.startActivity(intent);
