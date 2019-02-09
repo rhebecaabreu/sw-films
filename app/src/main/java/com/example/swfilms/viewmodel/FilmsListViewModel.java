@@ -2,7 +2,6 @@ package com.example.swfilms.viewmodel;
 
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.database.Observable;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
@@ -19,12 +18,10 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
-import retrofit2.Response;
 
 public class FilmsListViewModel {
     List<Film> filmList;
-    SwAPI service;
-    
+
     public void getFilms(final Context context, final ProgressDialog progress, final RecyclerView recyclerView) throws IOException {
 
         filmList = new ArrayList<>();
@@ -41,8 +38,6 @@ public class FilmsListViewModel {
                         filmList.add(f);
                     }
 
-                    Log.i("TEST: ", String.valueOf(filmList.size()));
-
                     FilmsListAdapter adapter = new FilmsListAdapter(context, filmList);
                     recyclerView.setAdapter(adapter);
                     progress.dismiss();
@@ -57,7 +52,6 @@ public class FilmsListViewModel {
                 Log.i("Response: ", " ERROR "+t.getMessage());
             }
         });
-
     }
 }
 

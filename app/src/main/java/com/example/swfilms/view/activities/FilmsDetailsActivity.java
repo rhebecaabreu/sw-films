@@ -4,17 +4,10 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
-
 import com.example.swfilms.R;
 import com.example.swfilms.model.entities.Film;
-import com.example.swfilms.view.adapters.FilmsListListener;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class FilmsDetailsActivity extends AppCompatActivity {
 
@@ -51,7 +44,7 @@ public class FilmsDetailsActivity extends AppCompatActivity {
             openingCrawlTextView.setText(film.getOpeningCrawl());
             producerTextView.setText("Producer "+film.getProducer());
 
-            switch (film.getEpisodeId()){
+            switch (film.getEpisodeId()) {
                 case 1:
                     posterImageView.setImageResource(R.drawable.ep1);
                     break;
@@ -74,7 +67,6 @@ public class FilmsDetailsActivity extends AppCompatActivity {
                     posterImageView.setImageResource(R.drawable.ep7);
                     break;
             }
-
         }
     }
 
